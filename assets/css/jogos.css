@@ -1,0 +1,109 @@
+.pagina-jogos {
+    width: 100%;
+    max-width: 480px;
+    padding: 30px 25px 10px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.pagina-jogos h1 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555555;
+    width: 65%;
+    text-align: center;
+}
+
+.bloco-jogo {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.espaco-imagem {
+    width: 100%;
+    height: 185px;
+    background-color: #d93829;
+    padding: 14px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+    clip-path: polygon(25px 0, 100% 0, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0 100%, 0 25px);
+}
+
+.espaco-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    clip-path: polygon(18px 0, 100% 0, 100% calc(100% - 18px), calc(100% - 18px) 100%, 0 100%, 0 18px);
+}
+
+.texto {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #e0e0e0;
+    text-align: justify;
+}
+
+@media (max-width: 375px) {
+    .pagina-jogos h1 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .pagina-jogos {
+        max-width: 720px;
+    }
+
+    .espaco-imagem {
+        height: 260px;
+        padding: 18px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pagina-jogos {
+        max-width: 1140px;
+        padding: 40px;
+        gap: 40px;
+    }
+
+    .pagina-jogos h1 {
+        font-size: 1.75rem;
+        width: 45%;
+    }
+
+    .bloco-jogo {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .bloco-jogo:nth-of-type(2) {
+        flex-direction: row-reverse;
+    }
+
+    .espaco-imagem {
+        flex: 1;
+        height: 280px;
+    }
+
+    .texto {
+        flex: 1;
+        font-size: 0.95rem;
+    }
+}

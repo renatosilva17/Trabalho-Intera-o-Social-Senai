@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interação Social Intervalo</title>
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <header>
+        <details class="menu-container">
+            <summary class="menu-summary">
+                <img class="menu-icone" src="../assets/images/menu.png" alt="Abrir menu">
+                <span class="menu-texto">Menu</span>
+            </summary>
+            <nav>
+                <a href="index.html">Início</a>
+                <a href="ds1t.html">DS1T</a>
+                <a href="lazer.html">Lazer</a>
+                <a href="jogos.html">Jogos</a>
+                <a href="refeitorio.html">Refeitório/Cantina</a>
+            </nav>
+        </details>
+        <img class="logo" src="../assets/images/logo.png" alt="Logo SENAI">
+    </header>
+
+    <main class="pagina-inicial">
+        
+        <section class="banner-principal">
+            <div class="banner-imagem"></div>
+            <div class="banner-titulo">
+                <h1>INTERAÇÃO<br>SOCIAL INTERVALO</h1>
+            </div>
+        </section>
+
+        <section class="secao-atividades">
+            <div class="titulo-atividades-branco">
+                <h2>ATIVIDADES</h2>
+            </div>
+
+            <div class="carrossel-container">
+                <button class="btn-carrossel prev" onclick="mudarSlide(-1)">❮</button>
+
+                <div class="carrossel-janela" id="janela">
+                    <div class="carrossel-trilho" id="trilho">
+                        
+                        <div class="card-atividade">
+                            <img src="../assets/images/cantina.png" alt="Refeitório e Cantina">
+                            <span>REFEITÓRIO/CANTINA</span>
+                        </div>
+
+                        <div class="card-atividade">
+                            <img src="../assets/images/musica.png" alt="Música">
+                            <span>MÚSICA</span>
+                        </div>
+
+                        <div class="card-atividade">
+                            <img src="../assets/images/xadrez.png" alt="Jogos">
+                            <span>JOGOS</span>
+                        </div>
+
+                        <div class="card-atividade">
+                            <img src="../assets/images/escola_senai.png" alt="Biblioteca">
+                            <span>BIBLIOTECA</span>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button class="btn-carrossel next" onclick="mudarSlide(1)">❯</button>
+            </div>
+        </section>
+
+        <section class="secao-textos">
+            <article class="bloco-destaque">
+                <div class="card-vermelho"></div>
+                <p class="caixa-texto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id leo a velit efficitur condimentum. Sed mollis hendrerit ex vel iaculis. Pellentesque a porta nulla. Nullam lobortis rutrum ante eget fringilla. Pellentesque consequat ex eros, eu faucibus nunc dapibus vel. Nunc porta sem justo, nec fringilla quam dictum condimentum. Aenean scelerisque purus urna, ut volutpat dolor eleifend nec
+                </p>
+            </article>
+
+            <article class="bloco-destaque">
+                <div class="card-vermelho"></div>
+                <p class="caixa-texto">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent id leo a velit efficitur condimentum. Sed mollis hendrerit ex vel iaculis. Pellentesque a porta nulla. Nullam lobortis rutrum ante eget fringilla. Pellentesque consequat ex eros, eu faucibus nunc dapibus vel. Nunc porta sem justo, nec fringilla quam dictum condimentum. Aenean scelerisque purus urna, ut volutpat dolor eleifend nec
+                </p>
+            </article>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="redes-sociais">
+            <a href="#" aria-label="Facebook">f</a>
+            <a href="#" aria-label="Twitter">t</a>
+            <a href="#" aria-label="YouTube">▶</a>
+            <a href="#" aria-label="Instagram">📷</a>
+        </div>
+
+        <div class="rodape-info">
+            <div class="autores">
+                <p>André Soares</p>
+                <p>Fabio de Oliveira</p>
+                <p>Renato Silva</p>
+            </div>
+            <p class="copyright">Copyright © 2026 | ds1t :p</p>
+        </div>
+    </footer>
+
+    <script>
+        const janela = document.getElementById('janela');
+
+        function mudarSlide(direcao) {
+            const larguraCard = janela.offsetWidth + 15;
+            
+            if (direcao === 1 && janela.scrollLeft + janela.offsetWidth >= janela.scrollWidth - 5) {
+                janela.scrollTo({ left: 0, behavior: 'smooth' });
+            } else if (direcao === -1 && janela.scrollLeft <= 5) {
+                janela.scrollTo({ left: janela.scrollWidth, behavior: 'smooth' });
+            } else {
+                janela.scrollBy({ left: direcao * larguraCard, behavior: 'smooth' });
+            }
+        }
+
+        setInterval(() => {
+            mudarSlide(1);
+        }, 4000);
+    </script>
+
+</body>
+</html>

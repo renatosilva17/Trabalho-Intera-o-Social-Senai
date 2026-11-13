@@ -1,0 +1,137 @@
+.pagina-secundaria {
+    width: 100%;
+    max-width: 480px;
+    padding: 30px 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+}
+
+.pagina-secundaria h1,
+.pagina-secundaria h2 {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #ffffff;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #555555;
+    width: 75%;
+    text-align: center;
+}
+
+.bloco {
+    width: 100%;
+    background-color: #d93829;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.bloco1 {
+    width: 100%;
+    padding: 0 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.espaco-imagem {
+    width: 100%;
+    height: 185px;
+    background-color: #3d3d3d;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #999999;
+    font-size: 0.9rem;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.35);
+}
+
+.bloco1 .espaco-imagem {
+    background-color: #d93829;
+    border-radius: 0;
+    color: #ffffff;
+    clip-path: polygon(25px 0, 100% 0, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0 100%, 0 25px);
+}
+
+.espaco-imagem img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.texto {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #ffffff;
+    text-align: justify;
+}
+
+@media (max-width: 375px) {
+    .pagina-secundaria h1,
+    .pagina-secundaria h2 {
+        font-size: 1.15rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .pagina-secundaria {
+        max-width: 720px;
+    }
+
+    .bloco {
+        padding: 35px;
+        border-radius: 12px;
+    }
+
+    .bloco1 {
+        padding: 0 35px;
+    }
+
+    .espaco-imagem {
+        height: 260px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .pagina-secundaria {
+        max-width: 1140px;
+        padding: 40px 0 20px 0;
+        gap: 35px;
+    }
+
+    .pagina-secundaria h1,
+    .pagina-secundaria h2 {
+        font-size: 1.75rem;
+        width: 45%;
+    }
+
+    .bloco,
+    .bloco1 {
+        flex-direction: row;
+        align-items: center;
+        gap: 40px;
+        padding: 40px;
+    }
+
+    .bloco1 {
+        flex-direction: row-reverse;
+    }
+
+    .espaco-imagem {
+        flex: 1;
+        height: 280px;
+    }
+
+    .texto {
+        flex: 1;
+        font-size: 0.95rem;
+    }
+}
